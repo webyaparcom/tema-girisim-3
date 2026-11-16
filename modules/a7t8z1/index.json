@@ -1,0 +1,62 @@
+{
+  "name": "Eksen Konum Haritası — iki eksenli alanda konumlanan seçenekler ve seçilenin kartı",
+  "description": "Dört bölgeli kare bir alan: yatay ve dikey eksenin iki ucunda etiketler (ör. Sakin ↔ Hareketli, Solo ↔ Eşli); her kayıt `x` · `y` (0–100) konumunda numaralı bir nokta ve adı. Nokta seçilince yandaki kart ad, rozet, metin ve iki eksen değerini çubukla gösterir. RTL'de yatay eksen aynalanır; dar ekranda yalnız seçilen noktanın adı yazılır. JS yokken tüm kartlar numaralı liste. tanitim-daire-yorunge'nin dekoratif yörünge rozetlerinden ve burc-izgara'nın karo ızgarasından farkı: kayıtlar iki boyutlu bir veri uzayına (x · y) yerleştirilir, eksen uçları anlamlıdır ve seçilen kaydın eksen değerleri çubuklarla okunur; module ailesinde dağılım/konum haritası iskeleti yok. Metinler dil sözlüğü, renkler desing + var(--mx-site-*), mantıksal CSS → RTL. Başlık ve metin yoksa blok basılmaz.",
+  "version": "1.0.0",
+  "icon": "scatter_plot",
+  "category": "module",
+  "subCategory": "two-axis-map",
+  "tags": [
+    "module",
+    "positioning",
+    "scatter",
+    "two-axis",
+    "detail-card",
+    "interactive",
+    "rtl",
+    "fabrika"
+  ],
+  "desing": {
+    "max": "1200px",
+    "bosluk": "clamp(56px, 8vw, 104px)",
+    "yuvarlak": "18px",
+    "ust": "",
+    "baslik": "",
+    "metin": "",
+    "img": "",
+    "img2": "",
+    "cta_ad": "",
+    "cta_url": "",
+    "cta2_ad": "",
+    "cta2_url": "",
+    "bg": "var(--mx-site-bg, #ffffff)",
+    "text": "var(--mx-site-text, #111318)",
+    "muted": "color-mix(in srgb, var(--mx-site-text, #111318) 68%, var(--mx-site-bg, #ffffff))",
+    "kartBg": "var(--mx-site-surface, #f6f7f9)",
+    "cizgi": "color-mix(in srgb, var(--mx-site-text, #111318) 12%, transparent)",
+    "accent": "var(--mx-site-primary, #2563eb)",
+    "accentInk": "color-mix(in srgb, var(--mx-site-primary, #2563eb) 70%, var(--mx-site-text, #111318))",
+    "accentText": "var(--mx-site-primary-contrast, #ffffff)",
+    "vurguBg": "var(--mx-site-primary, #2563eb)",
+    "vurguText": "var(--mx-site-primary-contrast, #ffffff)",
+    "xEksenAd": "",
+    "yEksenAd": "",
+    "xBasAd": "",
+    "xSonAd": "",
+    "yAltAd": "",
+    "yUstAd": "",
+    "bgcolor": "var(--mx-site-bg, #ffffff)",
+    "color": "var(--mx-site-text, #111318)"
+  },
+  "data": [],
+  "veri": {
+    "statik": true,
+    "dinamik": false,
+    "kaynak": "desing/data",
+    "alanlar": {
+      "ikon": "madde ikonu (Material Symbols)",
+      "baslik": "madde başlığı (dil sözlüğü, zorunlu)",
+      "metin": "madde metni (dil sözlüğü)",
+      "url": "madde bağlantısı"
+    }
+  }
+}

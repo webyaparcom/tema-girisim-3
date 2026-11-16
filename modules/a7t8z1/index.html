@@ -1,0 +1,120 @@
+<section class="modulex-eksen-konum-haritasi{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-eksen-konum-haritasi-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* eksen-konum-haritasi — tanitim-daire-yorunge'nin dekoratif yörünge rozetlerinden ve burc-izgara'nın karo ızgarasından farkı: kayıtlar iki boyutlu bir veri uzayına (x · y) yerleştirilir, eksen uçları anlamlıdır ve seçilen kaydın eksen değerleri çubuklarla okunur; module ailesinde dağılım/konum haritası iskeleti yok. */
+  .modulex-eksen-konum-haritasi { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-eksen-konum-haritasi *, .modulex-eksen-konum-haritasi *::before, .modulex-eksen-konum-haritasi *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-eksen-konum-haritasi :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-eksen-konum-haritasi :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-eksen-konum-haritasi :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-eksen-konum-haritasi :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-eksen-konum-haritasi img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-eksen-konum-haritasi) img { height: auto; }
+  .modulex-eksen-konum-haritasi [hidden] { display: none !important; }
+  .modulex-eksen-konum-haritasi :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-eksen-konum-haritasi :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-eksen-konum-haritasi-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-eksen-konum-haritasi-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-eksen-konum-haritasi--bassiz .modulex-eksen-konum-haritasi-bas { display: none; }
+  .modulex-eksen-konum-haritasi-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-eksen-konum-haritasi-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-eksen-konum-haritasi-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-eksen-konum-haritasi-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-eksen-konum-haritasi-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-eksen-konum-haritasi-dugme:hover { transform: translateY(-2px); }
+  .modulex-eksen-konum-haritasi-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-eksen-konum-haritasi-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-eksen-konum-haritasi-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-eksen-konum-haritasi-giris { display: grid; gap: 14px; max-width: 720px; margin-block-end: clamp(28px, 4vw, 44px); }
+  .modulex-eksen-konum-haritasi-duzen { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); align-items: center; }
+  .modulex-eksen-konum-haritasi-duzen--liste { grid-template-columns: minmax(0, 1fr); }
+  .modulex-eksen-konum-haritasi-alan-kap { padding: 34px 12px; }
+  .modulex-eksen-konum-haritasi-alan { position: relative; aspect-ratio: 4 / 3; border: 2px solid --text--; border-radius: 6px; background: linear-gradient(--cizgi--, --cizgi--) 50% 0 / 2px 100% no-repeat, linear-gradient(--cizgi--, --cizgi--) 0 50% / 100% 2px no-repeat, radial-gradient(circle at 100% 0, color-mix(in srgb, --accent-- 10%, transparent), transparent 55%), --kartBg--; }
+  .modulex-eksen-konum-haritasi-uc { position: absolute; padding: 2px 8px; border-radius: 4px; background: --bg--; color: --muted--; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+  .modulex-eksen-konum-haritasi-uc--ust { inset-block-end: calc(100% + 8px); left: 50%; translate: -50% 0; }
+  .modulex-eksen-konum-haritasi-uc--alt { inset-block-start: calc(100% + 8px); left: 50%; translate: -50% 0; }
+  .modulex-eksen-konum-haritasi-uc--bas { inset-block-start: calc(100% + 8px); inset-inline-start: 0; }
+  .modulex-eksen-konum-haritasi-uc--son { inset-block-start: calc(100% + 8px); inset-inline-end: 0; }
+  .modulex-eksen-konum-haritasi-nokta { position: absolute; z-index: 1; width: 0; height: 0; padding: 0; border: 0; background: none; color: --text--; font: inherit; }
+  .modulex-eksen-konum-haritasi-nokta:focus-visible { outline: none; }
+  .modulex-eksen-konum-haritasi-nokta:focus-visible .modulex-eksen-konum-haritasi-nno { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-eksen-konum-haritasi-nno { position: absolute; inset-block-start: -15px; inset-inline-start: -15px; display: grid; place-items: center; width: 30px; height: 30px; border: 2px solid --accent--; border-radius: 50%; background: --bg--; color: --accentInk--; font-size: 0.8rem; font-weight: 850; transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease; }
+  .modulex-eksen-konum-haritasi-netiket { position: absolute; inset-block-start: -12px; inset-inline-start: 22px; padding: 2px 8px; border-radius: 6px; background: --bg--; font-size: 0.82rem; font-weight: 750; white-space: nowrap; box-shadow: 0 4px 10px -8px color-mix(in srgb, --text-- 60%, transparent); }
+  .modulex-eksen-konum-haritasi-nokta--ters .modulex-eksen-konum-haritasi-netiket { inset-inline-start: auto; inset-inline-end: 22px; }
+  .modulex-eksen-konum-haritasi-nokta:hover .modulex-eksen-konum-haritasi-nno { transform: scale(1.15); }
+  .modulex-eksen-konum-haritasi-nokta[aria-pressed="true"] { z-index: 2; }
+  .modulex-eksen-konum-haritasi-nokta[aria-pressed="true"] .modulex-eksen-konum-haritasi-nno { background-color: --accent--; color: --accentText--; transform: scale(1.2); box-shadow: 0 0 0 6px color-mix(in srgb, --accent-- 25%, transparent); }
+  .modulex-eksen-konum-haritasi-nokta[aria-pressed="true"] .modulex-eksen-konum-haritasi-netiket { background-color: --text--; color: --bg--; }
+  .modulex-eksen-konum-haritasi-kartlar { display: grid; gap: 14px; }
+  .modulex-eksen-konum-haritasi-kart { display: grid; gap: 12px; padding: clamp(18px, 2.4vw, 28px); border: 1px solid --cizgi--; border-radius: --yuvarlak--; background: --bg--; }
+  .modulex-eksen-konum-haritasi--js .modulex-eksen-konum-haritasi-kart[data-konum] { padding: clamp(22px, 3vw, 34px); border: 0; background: --vurguBg--; color: --vurguText--; animation: modulex-eksen-konum-haritasi-kart 0.4s ease both; }
+  .modulex-eksen-konum-haritasi-kbas { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .modulex-eksen-konum-haritasi-kno { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: --text--; color: --bg--; font-size: 0.78rem; font-weight: 850; }
+  .modulex-eksen-konum-haritasi--js .modulex-eksen-konum-haritasi-kart[data-konum] .modulex-eksen-konum-haritasi-kno { background: --vurguText--; color: --vurguBg--; }
+  .modulex-eksen-konum-haritasi-kik { font-size: 26px; }
+  .modulex-eksen-konum-haritasi-kad { font-family: var(--mx-font-heading, inherit); font-size: 1.3rem; font-weight: 800; }
+  .modulex-eksen-konum-haritasi-krozet { padding: 2px 10px; border: 1.5px solid currentColor; border-radius: 999px; font-size: 0.72rem; font-weight: 800; }
+  .modulex-eksen-konum-haritasi-kmetin { font-size: 0.95rem; }
+  .modulex-eksen-konum-haritasi-olcek { display: grid; gap: 8px; margin: 0; }
+  .modulex-eksen-konum-haritasi-olc { display: grid; grid-template-columns: minmax(90px, auto) minmax(0, 1fr); align-items: center; gap: 12px; }
+  .modulex-eksen-konum-haritasi-olc dt { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+  .modulex-eksen-konum-haritasi-olc dd { margin: 0; }
+  .modulex-eksen-konum-haritasi-oyol { display: block; height: 8px; overflow: hidden; border-radius: 8px; background: color-mix(in srgb, currentColor 20%, transparent); }
+  .modulex-eksen-konum-haritasi-odolu { display: block; height: 100%; border-radius: 8px; background: currentColor; transition: inline-size 0.5s ease; }
+  .modulex-eksen-konum-haritasi-duzen + .modulex-eksen-konum-haritasi-cta { margin-block-start: 30px; }
+  @keyframes modulex-eksen-konum-haritasi-kart { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @media (max-width: 1024px) {
+    .modulex-eksen-konum-haritasi-duzen { grid-template-columns: minmax(0, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .modulex-eksen-konum-haritasi-alan { aspect-ratio: 1; }
+    .modulex-eksen-konum-haritasi--js .modulex-eksen-konum-haritasi-netiket { display: none; }
+    .modulex-eksen-konum-haritasi--js .modulex-eksen-konum-haritasi-nokta[aria-pressed="true"] .modulex-eksen-konum-haritasi-netiket { display: inline; }
+    .modulex-eksen-konum-haritasi:not(.modulex-eksen-konum-haritasi--js) .modulex-eksen-konum-haritasi-netiket { display: none; }
+  }
+  .modulex-eksen-konum-haritasi-bag { color: inherit; text-decoration: none; }
+  .modulex-eksen-konum-haritasi-bag:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .modulex-eksen-konum-haritasi-mbaslik { font-size: 1.05rem; font-weight: 700; }
+  .modulex-eksen-konum-haritasi-mmetin { color: --muted--; font-size: 0.95rem; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-eksen-konum-haritasi :is(.modulex-eksen-konum-haritasi-baslik, .modulex-eksen-konum-haritasi-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-eksen-konum-haritasi-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-eksen-konum-haritasi { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-eksen-konum-haritasi *, .modulex-eksen-konum-haritasi *::before, .modulex-eksen-konum-haritasi *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-eksen-konum-haritasi";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const konumSec = (s, P) => {
+        const n = [...s.querySelectorAll("[data-nokta]")];
+        const k = [...s.querySelectorAll("[data-kd]")];
+        if (!n.length || !k.length) return;
+        s.classList.add(P + "--js");
+        const sec = (j) => {
+          n.forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.nokta === j)));
+          k.forEach((a) => { a.hidden = a.hasAttribute("data-konum") && a.dataset.kd !== j; });
+        };
+        n.forEach((b) => b.addEventListener("click", () => sec(b.dataset.nokta)));
+        sec(n[0].dataset.nokta);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      konumSec(s, P, az);
+    });
+  })();
+</script>

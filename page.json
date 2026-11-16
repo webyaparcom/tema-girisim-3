@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "id": "vn3j6ufcc5",
+      "name": {
+        "tr": "Özellikler",
+        "en": "Features",
+        "ar": "الميزات"
+      },
+      "description": {
+        "tr": "Yarışma biçimleri ve pilot.",
+        "en": "Challenge formats and the pilot.",
+        "ar": "أشكال التحدي والتجربة."
+      },
+      "path": "hizmetler",
+      "icon": "directions_walk",
+      "category": "",
+      "status": "play",
+      "desing": {
+        "header": [],
+        "body": [
+          "a7t8z1",
+          "23xtfk"
+        ],
+        "footer": []
+      },
+      "index": 0
+    },
+    {
+      "name": {
+        "tr": "Destekçiler",
+        "en": "Backers",
+        "ar": "الداعمون"
+      },
+      "status": "play",
+      "id": "hakkimizda",
+      "path": "hakkimizda",
+      "category": "",
+      "url": "",
+      "index": 1,
+      "icon": "handshake",
+      "desing": {
+        "header": [],
+        "body": [
+          "4scmbt",
+          "5jqtxe"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Yatırımcılar, pilot şirketler ve İK notları (kurgusal).",
+        "en": "Investors, pilot companies and HR notes (fictional).",
+        "ar": "المستثمرون والشركات التجريبية وملاحظات الموارد البشرية (افتراضي)."
+      }
+    },
+    {
+      "name": {
+        "tr": "İletişim",
+        "en": "Contact",
+        "ar": "اتصل بنا"
+      },
+      "status": "play",
+      "id": "iletisim",
+      "path": "iletisim",
+      "category": "",
+      "url": "",
+      "index": 2,
+      "icon": "call",
+      "desing": {
+        "header": [],
+        "body": [
+          "adne51",
+          "k8mp01"
+        ],
+        "footer": []
+      },
+      "pathnext": "",
+      "description": {
+        "tr": "Adres, telefon ve çalışma saatleri.",
+        "en": "Address, phone and opening hours.",
+        "ar": "العنوان والهاتف وساعات العمل."
+      }
+    }
+  ],
+  "desc": []
+}

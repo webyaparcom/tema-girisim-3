@@ -1,0 +1,107 @@
+<section class="modulex-referans-sponsor-kademe{{fbsinif}}" {{fbetiket}}>
+  <div class="modulex-referans-sponsor-kademe-ic">
+    {{fbbas}}
+    {{fbgovde}}
+  </div>
+</section>
+
+<style>
+  /* referans-sponsor-kademe — referans-bento-vurgu tek amiral blok + eşit küçük kutular, referans-sayi-duvar düz duvar; bu modül çok kademeli hiyerarşi kurar (kademe başına ayrı ızgara ölçüsü, etiketli ayırıcı, kademeye göre gizlenen alanlar) — kademe verisiyle gruplama ailede yok. */
+  .modulex-referans-sponsor-kademe { box-sizing: border-box; width: 100%; padding: --bosluk-- 20px; background: --bg--; color: --text--; font-size: 1rem; line-height: 1.6; font-family: var(--mx-font-sans, inherit); overflow-wrap: break-word; }
+  .modulex-referans-sponsor-kademe *, .modulex-referans-sponsor-kademe *::before, .modulex-referans-sponsor-kademe *::after { box-sizing: border-box; }
+  /* ham/css.css «* { font-size: 14px }» kalıtımı keser — modül içinde boyut üstten gelsin (ikon yazı tipi hariç) */
+  .modulex-referans-sponsor-kademe :where(*:not(.material-symbols-outlined)) { font-size: inherit; }
+  /* aynı «*» kuralı font-weight 400 · line-height 1.2 · font-family de basar — modül içinde kalıtım */
+  .modulex-referans-sponsor-kademe :where(*:not(.material-symbols-outlined)) { font-weight: inherit; line-height: inherit; font-family: inherit; }
+  .modulex-referans-sponsor-kademe :where(h2, h3, h4, p, ul, ol, li, figure, blockquote, dl, dd) { margin: 0; }
+  .modulex-referans-sponsor-kademe :where(ul, ol) { padding: 0; list-style: none; }
+  .modulex-referans-sponsor-kademe img { display: block; max-width: 100%; }
+  /* <img width height> öznitelik yüksekliği CSS aspect-ratio'yu ezer — sıfır özgüllükle auto (modül sınıfının height'ı yine kazanır) */
+  :where(.modulex-referans-sponsor-kademe) img { height: auto; }
+  .modulex-referans-sponsor-kademe [hidden] { display: none !important; }
+  .modulex-referans-sponsor-kademe :where(a, button, summary, [data-cevir]) { cursor: pointer; }
+  .modulex-referans-sponsor-kademe :where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid --accent--; outline-offset: 3px; }
+  .modulex-referans-sponsor-kademe-ic { max-width: --max--; margin-inline: auto; }
+  .modulex-referans-sponsor-kademe-bas { display: grid; gap: 12px; margin-block-end: clamp(32px, 4vw, 52px); }
+  .modulex-referans-sponsor-kademe--bassiz .modulex-referans-sponsor-kademe-bas { display: none; }
+  .modulex-referans-sponsor-kademe-ust { color: --accentInk--; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+  .modulex-referans-sponsor-kademe-baslik { font-family: var(--mx-font-heading, inherit); font-size: clamp(1.8rem, 3.4vw, 2.8rem); font-weight: 750; letter-spacing: -0.025em; line-height: 1.1; }
+  .modulex-referans-sponsor-kademe-metin { color: --muted--; font-size: 1.05rem; line-height: 1.7; }
+  .modulex-referans-sponsor-kademe-bas { max-width: 780px; margin-inline: auto; text-align: center; justify-items: center; }
+  .modulex-referans-sponsor-kademe-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-block-start: 8px; }
+  .modulex-referans-sponsor-kademe-dugme { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 22px; border: 2px solid --accent--; border-radius: 999px; background: --accent--; color: --accentText--; font-weight: 700; text-decoration: none; transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease; }
+  .modulex-referans-sponsor-kademe-dugme:hover { transform: translateY(-2px); }
+  .modulex-referans-sponsor-kademe-dugme--ikincil { background: transparent; color: --text--; border-color: --cizgi--; }
+  .modulex-referans-sponsor-kademe-dugme--ikincil:hover { border-color: --accent--; }
+  .modulex-referans-sponsor-kademe-dugme .material-symbols-outlined { font-size: 20px; }
+
+  .modulex-referans-sponsor-kademe-kat { display: grid; gap: 18px; transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); transition-delay: calc(var(--j, 0) * 0.14s); }
+  .modulex-referans-sponsor-kademe-kat + .modulex-referans-sponsor-kademe-kat { margin-block-start: clamp(30px, 4vw, 48px); }
+  .modulex-referans-sponsor-kademe--hazir:not(.modulex-referans-sponsor-kademe--gor) .modulex-referans-sponsor-kademe-kat { transform: translateY(28px); }
+  .modulex-referans-sponsor-kademe-kserit { display: flex; align-items: center; gap: 16px; color: --accentInk--; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+  .modulex-referans-sponsor-kademe-kserit::before, .modulex-referans-sponsor-kademe-kserit::after { content: ""; flex: 1; height: 1px; background: --cizgi--; }
+  .modulex-referans-sponsor-kademe-ketiket { padding: 6px 16px; border: 1px solid currentColor; border-radius: 999px; background: --bg--; }
+  .modulex-referans-sponsor-kademe-logolar { display: grid; justify-content: center; gap: 14px; }
+  .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-logolar { grid-template-columns: repeat(auto-fit, minmax(280px, 440px)); }
+  .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-logolar { grid-template-columns: repeat(auto-fit, minmax(200px, 260px)); }
+  .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-logolar { grid-template-columns: repeat(auto-fit, minmax(130px, 168px)); gap: 10px; }
+  .modulex-referans-sponsor-kademe-sponsor > *, .modulex-referans-sponsor-kademe-sponsor > .modulex-referans-sponsor-kademe-bag { display: grid; place-items: center; align-content: center; gap: 8px; height: 100%; border: 1px solid --cizgi--; background: --kartBg--; text-align: center; transition: transform 0.3s ease, border-color 0.3s ease; }
+  .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-sponsor > * { min-height: 220px; padding: clamp(22px, 3vw, 36px); border: 2px solid --accent--; border-radius: calc(--yuvarlak-- * 1.4); box-shadow: 0 28px 50px -38px color-mix(in srgb, --accent-- 90%, transparent); }
+  .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-sponsor > * { min-height: 140px; padding: 22px; border-radius: --yuvarlak--; }
+  .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-sponsor > * { min-height: 84px; padding: 12px 10px; border-radius: 12px; }
+  .modulex-referans-sponsor-kademe-sponsor:hover > * { border-color: --accent--; transform: translateY(-3px); }
+  .modulex-referans-sponsor-kademe-simg { width: auto; max-width: 100%; height: 36px; object-fit: contain; filter: grayscale(1); transition: filter 0.3s ease; }
+  .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-simg { height: 72px; filter: none; }
+  .modulex-referans-sponsor-kademe-sponsor:hover .modulex-referans-sponsor-kademe-simg { filter: none; }
+  .modulex-referans-sponsor-kademe-sad { font-family: var(--mx-font-heading, inherit); font-weight: 800; letter-spacing: -0.01em; line-height: 1.2; }
+  .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-sad { font-size: clamp(1.6rem, 3vw, 2.3rem); }
+  .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-sad { font-size: 1.15rem; }
+  .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-sad { font-size: 0.92rem; }
+  .modulex-referans-sponsor-kademe-salt { color: --muted--; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+  .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-salt, .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-sm, .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-sm { display: none; }
+  .modulex-referans-sponsor-kademe-sm { max-width: 38ch; color: --muted--; font-size: 0.95rem; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .modulex-referans-sponsor-kademe-logolar { display: flex; flex-wrap: wrap; gap: 10px; }
+    .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-sponsor { flex: 1 1 calc(50% - 5px); }
+    .modulex-referans-sponsor-kademe-kat--2 .modulex-referans-sponsor-kademe-sponsor { flex: 1 1 calc(33.333% - 7px); min-width: 96px; }
+    .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-sponsor { flex: 1 1 100%; }
+    .modulex-referans-sponsor-kademe-kat--0 .modulex-referans-sponsor-kademe-sponsor > * { min-height: 170px; }
+    .modulex-referans-sponsor-kademe-kat--1 .modulex-referans-sponsor-kademe-sponsor > * { min-height: 110px; padding: 14px; }
+  }
+  .modulex-referans-sponsor-kademe-logo { display: block; width: auto; max-width: 100%; height: clamp(32px, 4vw, 48px); object-fit: contain; filter: grayscale(1); transition: filter 0.3s ease, transform 0.3s ease; }
+  .modulex-referans-sponsor-kademe-kelime { display: inline-block; color: --text--; font-family: var(--mx-font-heading, inherit); font-weight: 800; letter-spacing: -0.02em; line-height: 1.15; transition: color 0.3s ease; }
+  .modulex-referans-sponsor-kademe-bag { color: inherit; text-decoration: none; }
+  .modulex-referans-sponsor-kademe-sektor { color: --accentInk--; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .modulex-referans-sponsor-kademe-kmetin { color: --muted--; font-size: 0.95rem; line-height: 1.65; }
+  .modulex-referans-sponsor-kademe-yil { color: --muted--; font-size: 0.85rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .modulex-referans-sponsor-kademe-harf img { width: 100%; height: 100%; object-fit: contain; }
+
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-referans-sponsor-kademe :is(.modulex-referans-sponsor-kademe-baslik, .modulex-referans-sponsor-kademe-ust, h3, h4, strong) { letter-spacing: 0; }
+  :is([lang="ar"], [lang="fa"], [lang="he"], [lang="ur"]) .modulex-referans-sponsor-kademe-baslik { line-height: 1.35; }
+  @media (max-width: 768px) {
+    .modulex-referans-sponsor-kademe { padding-inline: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modulex-referans-sponsor-kademe *, .modulex-referans-sponsor-kademe *::before, .modulex-referans-sponsor-kademe *::after { animation: none !important; transition: none !important; }
+  }
+</style>
+<script>
+  (() => {
+    const P = "modulex-referans-sponsor-kademe";
+    const az = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+    const gozlem = (s, P, az) => {
+        const gor = () => s.classList.add(P + "--gor");
+        s.classList.add(P + "--hazir");
+        if (az || !("IntersectionObserver" in window)) { gor(); return; }
+        const io = new IntersectionObserver((gs) => {
+          gs.forEach((g) => { if (g.isIntersecting) { gor(); io.disconnect(); } });
+        }, { threshold: 0.15 });
+        io.observe(s);
+      };
+    document.querySelectorAll("." + P).forEach((s) => {
+      if (s.dataset.fbHazir) return;
+      s.dataset.fbHazir = "1";
+      gozlem(s, P, az);
+    });
+  })();
+</script>

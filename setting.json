@@ -1,0 +1,54 @@
+{
+  "order": false,
+  "user": false,
+  "description": {
+    "tr": "Adımlık: şirket ekiplerini haftalık adım yarışmasıyla hareketlendiren mobil uygulama girişimi; takım skor tablosu, yarışma biçimleri ve 14 günlük pilot. Demo site; içerik kurgusaldır.",
+    "en": "Adimlik: a mobile app start-up that gets company teams moving with weekly step challenges; team leaderboards, challenge formats and a 14-day pilot. Demo site; content is fictional.",
+    "ar": "أديملك: شركة ناشئة لتطبيق جوال يحفّز فرق الشركات على الحركة بتحديات خطوات أسبوعية؛ لوحة نتائج للفرق وأشكال تحدٍّ وتجربة لمدة 14 يومًا. موقع تجريبي؛ المحتوى افتراضي."
+  },
+  "keyword": {
+    "tr": "girişim, adım yarışması, çalışan bağlılığı, mobil uygulama, takım skor tablosu, İstanbul",
+    "en": "start-up, step challenge, employee engagement, mobile app, team leaderboard, Istanbul",
+    "ar": "شركة ناشئة، تحدي الخطوات، تفاعل الموظفين، تطبيق جوال، لوحة نتائج الفرق"
+  },
+  "category": "Kurumsal",
+  "name": "Adımlık",
+  "domain": "girisim-3.webyapar.com",
+  "langs": {
+    "tr": true,
+    "en": true,
+    "ar": true,
+    "de": false,
+    "ru": false,
+    "es": false,
+    "fr": false,
+    "it": false,
+    "ja": false,
+    "zh": false,
+    "ko": false,
+    "pt": false
+  },
+  "logo": "logo.png",
+  "multi": false,
+  "publishMode": "static",
+  "font": {
+    "body": "open-sans",
+    "heading": "rubik",
+    "ar": {
+      "body": "ibm-plex-sans-arabic",
+      "heading": "noto-kufi-arabic"
+    }
+  },
+  "colorScheme": "auto",
+  "theme_color": "#2266DD",
+  "seo": {
+    "noindex": true
+  },
+  "cssTokens": {
+    "--mx-radius-sm": "4px",
+    "--mx-radius-md": "6px",
+    "--mx-radius-lg": "8px",
+    "--mx-radius-xl": "11px"
+  },
+  "icon": "icon.png"
+}
