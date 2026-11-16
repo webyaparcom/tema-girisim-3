@@ -1,0 +1,40 @@
+{
+  "id": "vn3j6ufcc5",
+  "name": {
+    "tr": "Özellikler",
+    "en": "Features",
+    "ar": "الميزات"
+  },
+  "description": {
+    "tr": "Yarışma biçimleri ve pilot.",
+    "en": "Challenge formats and the pilot.",
+    "ar": "أشكال التحدي والتجربة."
+  },
+  "keyword": {
+    "tr": "adım yarışması",
+    "en": "step challenge",
+    "ar": "تحدي الخطوات"
+  },
+  "path": "hizmetler",
+  "icon": "directions_walk",
+  "category": "",
+  "status": "play",
+  "desing": {
+    "header": [],
+    "body": [
+      "a7t8z1",
+      "23xtfk"
+    ],
+    "footer": []
+  },
+  "index": 0,
+  "url": "",
+  "text": {},
+  "title": {
+    "tr": "Özellikler",
+    "en": "Features",
+    "ar": "الميزات"
+  },
+  "date": "2026-11-16T22:50:40.613Z",
+  "update": "2026-11-16T23:08:30.916Z"
+}
