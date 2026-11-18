@@ -4,12 +4,16 @@
   "description": {
     "tr": "Adımlık: şirket ekiplerini haftalık adım yarışmasıyla hareketlendiren mobil uygulama girişimi; takım skor tablosu, yarışma biçimleri ve 14 günlük pilot. Demo site; içerik kurgusaldır.",
     "en": "Adimlik: a mobile app start-up that gets company teams moving with weekly step challenges; team leaderboards, challenge formats and a 14-day pilot. Demo site; content is fictional.",
-    "ar": "أديملك: شركة ناشئة لتطبيق جوال يحفّز فرق الشركات على الحركة بتحديات خطوات أسبوعية؛ لوحة نتائج للفرق وأشكال تحدٍّ وتجربة لمدة 14 يومًا. موقع تجريبي؛ المحتوى افتراضي."
+    "ar": "أديملك: شركة ناشئة لتطبيق جوال يحفّز فرق الشركات على الحركة بتحديات خطوات أسبوعية؛ لوحة نتائج للفرق وأشكال تحدٍّ وتجربة لمدة 14 يومًا. موقع تجريبي؛ المحتوى افتراضي.",
+    "de": "Adımlık: ein Mobile-App-Startup, das Firmenteams mit einem wöchentlichen Schrittwettbewerb in Bewegung bringt; Team-Rangliste, Wettbewerbsformate und 14-Tage-Pilot. Demo-Website; der Inhalt ist fiktiv.",
+    "ru": "Adımlık: стартап мобильного приложения, который мотивирует команды компаний еженедельным соревнованием по шагам; командная таблица результатов, форматы соревнований и 14-дневный пилот. Демо-сайт; содержание вымышленное."
   },
   "keyword": {
     "tr": "girişim, adım yarışması, çalışan bağlılığı, mobil uygulama, takım skor tablosu, İstanbul",
     "en": "start-up, step challenge, employee engagement, mobile app, team leaderboard, Istanbul",
-    "ar": "شركة ناشئة، تحدي الخطوات، تفاعل الموظفين، تطبيق جوال، لوحة نتائج الفرق"
+    "ar": "شركة ناشئة، تحدي الخطوات، تفاعل الموظفين، تطبيق جوال، لوحة نتائج الفرق",
+    "de": "Startup, Schritt-Challenge, Mitarbeiterbindung, Mobile App, Team-Rangliste, Istanbul",
+    "ru": "стартап, челлендж по шагам, вовлеченность сотрудников, мобильное приложение, таблица лидеров команды, Стамбул"
   },
   "category": "Kurumsal",
   "name": "Adımlık",
@@ -18,15 +22,27 @@
     "tr": true,
     "en": true,
     "ar": true,
-    "de": false,
-    "ru": false,
+    "de": true,
+    "ru": true,
     "es": false,
     "fr": false,
     "it": false,
     "ja": false,
     "zh": false,
     "ko": false,
-    "pt": false
+    "pt": false,
+    "fa": false,
+    "he": false,
+    "ur": false,
+    "nl": false,
+    "pl": false,
+    "uk": false,
+    "az": false,
+    "ka": false,
+    "el": false,
+    "bg": false,
+    "ro": false,
+    "hi": false
   },
   "logo": "logo.png",
   "multi": false,

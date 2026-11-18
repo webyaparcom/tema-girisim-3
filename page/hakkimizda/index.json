@@ -2,7 +2,9 @@
   "name": {
     "tr": "Destekçiler",
     "en": "Backers",
-    "ar": "الداعمون"
+    "ar": "الداعمون",
+    "de": "Sponsoren",
+    "ru": "Спонсоры"
   },
   "status": "play",
   "category": "",
@@ -23,7 +25,9 @@
   "description": {
     "tr": "Yatırımcılar, pilot şirketler ve İK notları (kurgusal).",
     "en": "Investors, pilot companies and HR notes (fictional).",
-    "ar": "المستثمرون والشركات التجريبية وملاحظات الموارد البشرية (افتراضي)."
+    "ar": "المستثمرون والشركات التجريبية وملاحظات الموارد البشرية (افتراضي).",
+    "de": "Investoren, Pilotunternehmen und HR-Notizen (fiktiv).",
+    "ru": "Инвесторы, пилотные компании и заметки HR (вымышленные)."
   },
   "spot": {
     "tr": "",
@@ -34,12 +38,16 @@
   "title": {
     "tr": "Destekçiler",
     "en": "Backers",
-    "ar": "الداعمون"
+    "ar": "الداعمون",
+    "de": "Sponsoren",
+    "ru": "Спонсоры"
   },
   "keyword": {
     "tr": "hakkımızda",
     "en": "about",
-    "ar": "من نحن"
+    "ar": "من نحن",
+    "de": "Über uns",
+    "ru": "О нас"
   },
   "text": {},
   "update": "2026-11-16T23:08:30.924Z",
