@@ -5,12 +5,16 @@
       "name": {
         "tr": "Özellikler",
         "en": "Features",
-        "ar": "الميزات"
+        "ar": "الميزات",
+        "de": "Funktionen",
+        "ru": "Возможности"
       },
       "description": {
         "tr": "Yarışma biçimleri ve pilot.",
         "en": "Challenge formats and the pilot.",
-        "ar": "أشكال التحدي والتجربة."
+        "ar": "أشكال التحدي والتجربة.",
+        "de": "Wettbewerbsformate und der Pilot.",
+        "ru": "Форматы соревнований и пилотный проект."
       },
       "path": "hizmetler",
       "icon": "directions_walk",
@@ -30,7 +34,9 @@
       "name": {
         "tr": "Destekçiler",
         "en": "Backers",
-        "ar": "الداعمون"
+        "ar": "الداعمون",
+        "de": "Sponsoren",
+        "ru": "Спонсоры"
       },
       "status": "play",
       "id": "hakkimizda",
@@ -51,14 +57,18 @@
       "description": {
         "tr": "Yatırımcılar, pilot şirketler ve İK notları (kurgusal).",
         "en": "Investors, pilot companies and HR notes (fictional).",
-        "ar": "المستثمرون والشركات التجريبية وملاحظات الموارد البشرية (افتراضي)."
+        "ar": "المستثمرون والشركات التجريبية وملاحظات الموارد البشرية (افتراضي).",
+        "de": "Investoren, Pilotunternehmen und HR-Notizen (fiktiv).",
+        "ru": "Инвесторы, пилотные компании и заметки HR (вымышленные)."
       }
     },
     {
       "name": {
         "tr": "İletişim",
         "en": "Contact",
-        "ar": "اتصل بنا"
+        "ar": "اتصل بنا",
+        "de": "Kontakt",
+        "ru": "Контакты"
       },
       "status": "play",
       "id": "iletisim",
@@ -79,7 +89,9 @@
       "description": {
         "tr": "Adres, telefon ve çalışma saatleri.",
         "en": "Address, phone and opening hours.",
-        "ar": "العنوان والهاتف وساعات العمل."
+        "ar": "العنوان والهاتف وساعات العمل.",
+        "de": "Adresse, Telefon und Öffnungszeiten.",
+        "ru": "Адрес, телефон и часы работы."
       }
     }
   ],

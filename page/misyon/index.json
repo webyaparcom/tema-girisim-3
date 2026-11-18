@@ -3,17 +3,23 @@
   "name": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "description": {
     "tr": "Misyonumuz",
     "en": "Our mission",
-    "ar": "مهمتنا"
+    "ar": "مهمتنا",
+    "de": "Unsere Mission",
+    "ru": "Наша миссия"
   },
   "keyword": {
     "tr": "Misyon",
     "en": "mission, our mission, corporate responsibility",
-    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية"
+    "ar": "الرسالة, رسالتنا, المسؤولية المؤسسية",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "path": "misyon",
   "icon": "flag",
@@ -29,12 +35,16 @@
   "text": {
     "tr": "<h2>Misyonumuz</h2>\n<p>Ofis ekiplerini rekabetten çok takım ruhuyla, gün içinde daha çok yürümeye özendirmek.</p>",
     "en": "<h2>Our mission</h2>\n<p>To encourage office teams to walk more during the day, through team spirit more than competition.</p>",
-    "ar": "<h2>مهمتنا</h2>\n<p>تشجيع فرق المكاتب على المشي أكثر خلال اليوم بروح الفريق أكثر من المنافسة.</p>"
+    "ar": "<h2>مهمتنا</h2>\n<p>تشجيع فرق المكاتب على المشي أكثر خلال اليوم بروح الفريق أكثر من المنافسة.</p>",
+    "de": "<h2>Unsere Mission</h2>\n<p>Bürotteams eher mit Teamgeist als mit Wettbewerb dazu anzuregen, tagsüber mehr zu Fuß zu gehen.</p>",
+    "ru": "<h2>Наша миссия</h2>\n<p>Побуждать офисные команды больше ходить в течение дня — скорее духом команды, чем соперничеством.</p>"
   },
   "title": {
     "tr": "Misyon",
     "en": "Mission",
-    "ar": "المهمة"
+    "ar": "المهمة",
+    "de": "Mission",
+    "ru": "Миссия"
   },
   "date": "2026-11-16T22:50:40.296Z",
   "update": "2026-11-16T23:08:30.954Z",
